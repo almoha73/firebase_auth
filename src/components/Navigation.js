@@ -33,10 +33,13 @@ export default function Navigation({ navigation }) {
 		}
 	}
 	return (
-		<Disclosure as="nav" className="bg-amber-100 w-full flex justify-center">
+		<Disclosure
+			as="nav"
+			className="bg-amber-100 w-full flex flex-col justify-center items-center"
+		>
 			{({ open }) => (
 				<>
-					<div className="w-11/12">
+					<div className="w-11/12 flex ">
 						<div className="relative flex sm:w-full h-16 items-center justify-between">
 							<div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
 								{/* Mobile menu button*/}
@@ -50,7 +53,7 @@ export default function Navigation({ navigation }) {
 								</Disclosure.Button>
 							</div>
 							<div className="flex  sm:w-full items-center justify-center sm:items-center sm:justify-center">
-								<div className="hidden  sm:block sm:flex sm:justify-between w-full">
+								<div className="hidden sm:block sm:flex sm:justify-between w-full">
 									<div className="flex space-x-4">
 										{navigation
 											? navigation.map((item) => (
@@ -92,7 +95,7 @@ export default function Navigation({ navigation }) {
 						</div>
 					</div>
 
-					<Disclosure.Panel className="sm:hidden">
+					<Disclosure.Panel className="sm:hidden ">
 						<div className="space-y-4 px-2 pt-2 pb-3 flex flex-col">
 							{navigation
 								? navigation.map((item) => (
@@ -128,7 +131,7 @@ export default function Navigation({ navigation }) {
 										</Disclosure.Button>
 								  ))}
 						</div>
-						<button onClick={handleLogout} className="block mx-auto">
+						<button onClick={handleLogout} className="block mx-auto pb-8">
 							Sign Out
 						</button>
 					</Disclosure.Panel>
